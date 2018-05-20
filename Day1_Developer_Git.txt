@@ -1,0 +1,26 @@
+# 개발자의 생각 단계
+
+연차     생각
+-----------------------------
+[1~ 3]   How  에 대해 고민
+[5~ 8]   What 에 대해 고민
+[10~ ]   Why  에 대해 고민
+
+
+# Git
+
+1. Git?
+   협업을 위한 소프트웨어
+
+2. GitHub?
+   Git을 활용해 만든 Web 프로그램이자 Remote 저장소
+
+3. 기본 명령어
+   git status   : 내 Local 파일들의 상태를 보여준다
+   git commit : 내 Local의 수정 파일을, Local 저장소에 반영한다
+   git push    : 내 Local 저장소의 파일을 Remote 저장소로 반영한다
+   git pull      : Remote 저장소의 파일을 Local 저장소로 옮긴다 
+
+4. etc
+   pull request : 내 저장소에 있는 파일을, 다른 사람이 가져가 수정 한 뒤
+                     그 사람이 호의를 가지고, 수정한 파일을 내 저장소에 반영해 달라고 요청하는 것
