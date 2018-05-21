@@ -1,0 +1,37 @@
+지난 시간에 하다 만걸 정리해 봤습니다.
+
+질문) commit한 내용이 잘못된걸 파악한 후 되돌리려고 할 때
+
+답변)
+
+우선 google에 git reset을 쳐 보면 관련된 내용이 많이 있습니다.
+그걸 정리해 보면
+
+git reset <commit>
+
+이렇게 하면 해당 commit으로 돌아갑니다. 여기까지는 했었죠.
+그런데 파일이 안바뀐 이유는 바뀐 상태를 지우지 않아서입니다.
+무슨 뜻이냐 하면 commit은 되돌린건 맞지만 그건 local repository만 그렇게 된 겁니다.
+그래서 local repository에 있는 걸 다시 local folder로 반영하려면 다음과 같은 명령어를 쓰면 됩니다.
+
+git checkout -- <filename>
+git checkout -- .
+
+만약 . 만 한다면 모든 파일을 실제 local folder로 되돌립니다.
+
+여기까지 하면 local 까지는 완료 한거고
+다시 remote repository로 반영하려면
+되돌려진 파일을 local repository에 commit 하고 push 하면 됩니다.
+
+그런데... 잘 생각해 보니
+만약 잘못 수정한 파일의 내용이 1줄 2줄 밖에 안되고 파일 하나만 수정했다면
+다시 잘못 수정되기 전의 내용으로 수정 하고 commit, push 하는게 더 빠르지 않을까 생각해 봤네요.
+
+저도 잘못 올린 내용은 다시 없애거나 수정해서 그걸 또 올렸던 것 같네요.
+
+어쨌뜬
+
+http://hochulshin.com/git-revert-changes/
+
+위 링크에 있는 내용 참고했습니다.
+수혁님도 같이 참고해 보세요.
